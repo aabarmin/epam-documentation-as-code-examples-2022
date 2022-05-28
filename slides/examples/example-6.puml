@@ -1,0 +1,9 @@
+@startuml example-6
+
+DataStorage - [Data Provider]
+[Data Provider] .down.> REST: Publish
+
+[Data Consumer] .up.> REST: Consume
+[Data Consumer] - GraphQL
+
+@enduml

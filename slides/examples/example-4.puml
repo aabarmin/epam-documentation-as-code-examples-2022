@@ -1,0 +1,16 @@
+@startuml example-4
+
+interface Processor {
+    + process(): void
+}
+class TextProcessor {
+    + processText(): void
+}
+class ImageProcessor {
+    + processImage(): void
+}
+
+TextProcessor -up-|> Processor
+ImageProcessor -up-|> Processor
+
+@enduml

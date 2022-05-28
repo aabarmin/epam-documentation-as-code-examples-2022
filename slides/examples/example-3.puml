@@ -1,0 +1,16 @@
+@startuml example-3
+
+actor Client
+participant System
+participant 3rdParty
+
+Client -> System: Request
+    System -> 3rdParty: API call
+    alt ok
+        3rdParty -> System: Data
+    else error
+        3rdParty -> System: Error
+    end 
+System -> Client: Response
+
+@enduml

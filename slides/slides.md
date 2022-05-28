@@ -48,6 +48,7 @@ Aleksandr_Barmin@epam.com
 
 ---
 
+![bg right](./images/pexels-karolina-grabowska-7877194.jpeg)
 # Importance of documentation
 
 Documentation is important:
@@ -102,6 +103,8 @@ Documentation increases the collective knowledge of everyone that you work with.
 
 ---
 
+
+![bg right](./images/pexels-pavel-danilyuk-8112178.jpeg)
 # Documentation for software
 
 For text:
@@ -118,15 +121,17 @@ For diagrams:
 
 ---
 
-# When your documentation is not code
+![bg right](./images/pexels-tima-miroshnichenko-5439372.jpeg)
+# When documentation is not (only) code
 
-- Different software for different tasks
+- Different software for different types of content
 - Incompatible software
-- Hard to track history without change log
+- Tracking of history of changes is complicated
 - Consistent styling is complicated
 
 ---
 
+![bg right](./images/pexels-olya-kobruseva-7873558.jpeg)
 # Documentation as code
 
 https://www.writethedocs.org/
@@ -141,6 +146,7 @@ Documentation as Code (Docs as Code) refers to a philosophy that you should be w
 
 ---
 
+![bg right](./images/pexels-lukas-669619.jpeg)
 # Plain Text Markup
 
 - HTML
@@ -153,6 +159,7 @@ Documentation as Code (Docs as Code) refers to a philosophy that you should be w
 
 ---
 
+![bg right](./images/pexels-picjumbocom-196644.jpeg)
 # Markdown
 
 https://www.markdownguide.org/
@@ -165,6 +172,25 @@ https://www.markdownguide.org/
 
 ---
 
+![bg right:50% height:90%](./examples/example-1-md.png)
+# Markdown Example
+
+```
+
+- # Header 1
+- ## Header 2
+- ### Header 3
+- **bold**
+- *italic*
+
+| Header 1 | Header 2 |
+| :--------| :------: |
+| Cell 1   | Cell 2   |
+
+```
+---
+
+![bg right](./images/pexels-marcio-santos-6308622.jpeg)
 # Asciidoc
 
 https://asciidoc.org/
@@ -181,6 +207,23 @@ https://asciidoc.org/
 
 ---
 
+![bg right:50% height:75%](./examples/example-2-adoc.png)
+# Asciidoc Example
+
+```
+----
+This is a code listing
+----
+
+.This is a text accordion
+[%collapsible]
+====
+This text is hidden inside
+====
+```
+---
+
+![bg right](./images/pexels-kindel-media-7651817.jpeg)
 # How to write
 
 - VSCode
@@ -190,22 +233,30 @@ https://asciidoc.org/
 
 ---
 
+![bg right](./images/pexels-pavel-danilyuk-7654452.jpeg)
 # How to write
 
+- MS Teams
 - Notion
 - MacDown, iA Writer or Marked 2
 - Obsidian, Notable, Bear, Joplin
 
 ---
 
+![bg right](./images/Credit-Request-Process-in-BPMN.png)
 # Modelling notations
 
 - BPMN
 - IDEF
 - UML
 
+
+---
+![bg center height:80%](./images/bpmn-business-process-book-lending-example.png)
+
 ---
 
+![bg right](./images/pexels-lex-photography-1109541.jpeg)
 # Drawing UML
 
 - PlantUML
@@ -216,6 +267,91 @@ https://asciidoc.org/
 - UML Graph
 - Asciidoctor Diagram
 
+---
+
+![bg right height:90%](./examples/example-3.png)
+# Sequence diagram
+
+```
+@startuml Sequence
+
+actor Client
+participant System
+participant 3rdParty
+
+Client -> System: Request
+    System -> 3rdParty: API call
+    alt ok
+        3rdParty -> System: Data
+    else error
+        3RdParty -> System: Error
+    end 
+System -> Client: Response
+
+@enduml
+```
+
+---
+
+![bg right width:90%](./examples/example-4.png)
+# Class diagram
+
+```
+@startuml example-4
+
+interface Processor {
+    + process(): void
+}
+class TextProcessor {
+    + processText(): void
+}
+class ImageProcessor {
+    + processImage(): void
+}
+
+TextProcessor -up-|> Processor
+ImageProcessor -up-|> Processor
+
+@enduml
+```
+
+---
+
+![bg right height:90%](./examples/example-5.png)
+# Activity diagram
+
+```
+@startuml example-5
+
+(*) --> Request data
+
+if "Data correct?" then
+    --> [yes] Process data
+    --> End
+else
+    --> [no] Show error
+    --> End
+endif
+
+@enduml
+```
+
+---
+
+![bg right width:90%](./examples/example-6.png)
+# Component diagram
+
+```
+@startuml example-6
+
+DataStorage - [Data Provider]
+[Data Provider] .down.> REST: Publish
+
+[Data Consumer] .up.> REST: Consume
+[Data Consumer] - GraphQL
+
+@enduml
+```
 ---
 
 # Slides as Text

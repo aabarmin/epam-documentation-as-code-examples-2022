@@ -1,0 +1,35 @@
+= Header 1
+
+== Header 2
+=== Header 3
+
+====
+Container with text inside. 
+====
+
+----
+This is a code listing
+----
+
+.This is a text accordion
+[%collapsible]
+====
+This text is hidden inside
+====
+
+.Example of a listing
+[listing]
+$ ls -al
+
+.Example of Java code
+[source,Java]
+----
+public static void main(String args[]) {}
+----
+
+.Example of attributes
+====
+:author-name: Aleksandr Barmin
+
+Author of this doc is {author-name}
+====
