@@ -354,6 +354,7 @@ DataStorage - [Data Provider]
 ```
 ---
 
+![bg right](./images/pexels-christina-morillo-1181537.jpeg)
 # Slides as Text
 
 - reveal.js
@@ -363,6 +364,12 @@ DataStorage - [Data Provider]
 
 ---
 
+![bg right](./images/279124699_568885177806641_3001527175523351435_n.jpeg)
 # Summary
 
 - Documentation is important
+- Plain text `->` docx, pdf
+- PlantUML `->` png
+- Marp `->` pptx, pdf
+
+https://github.com/aabarmin/epam-documentation-as-code-examples-2022
